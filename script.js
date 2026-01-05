@@ -50,5 +50,10 @@ function nextPage() {
   showPage(currentPage);
 }
 
+function restartGame() {
+  localStorage.clear();
+  location.reload();
+}
+
 // Load saved progress
 showPage(currentPage);
