@@ -26,39 +26,48 @@
       <p id="error" class="error"></p>
 
       <button onclick="checkPassword()">Whisper</button>
-    </section>
+  </section>
   
-  <section class="page active" data-page="1">
+  <section class="page active" data-page="1" data-password="debut">
     <h1>Well done. Now keep your wits about you, and sharpen your mind.</h1>
     <p>Only those of precise manner and discretion may proceed.</p>
     <button onclick="nextPage()">I accept.</button>
   </section>
 
-  <section class="page" data-page="2">
+  <section class="page" data-page="2" data-password="scandal">
     <h1>Riddle I</h1>
     <p>[Caesar Box Puzzle Placeholder]</p>
+    
+       <input
+    type="text"
+    placeholder="Enter password"
+    onkeydown="if(event.key==='Enter') checkPagePassword(this)"
+  >
+
+  <p class="error"></p>
+    
     <button onclick="nextPage()">Next</button>
   </section>
 
-  <section class="page" data-page="3">
+  <section class="page" data-page="3" data-password="whistledown">
     <h1>Riddle II</h1>
     <p>[Jigsaw Puzzle Placeholder]</p>
     <button onclick="nextPage()">Next</button>
   </section>
 
-  <section class="page" data-page="4">
+  <section class="page" data-page="4" data-password="etiquette">
     <h1>Riddle III</h1>
     <p>[Mirrored Text Placeholder]</p>
     <button onclick="nextPage()">Next</button>
   </section>
 
-  <section class="page" data-page="5">
+  <section class="page" data-page="5" data-password="rake">
     <h1>Riddle IV</h1>
     <p>[Sheet Music Cipher Placeholder]</p>
     <button onclick="nextPage()">Next</button>
   </section>
 
-  <section class="page" data-page="6">
+  <section class="page" data-page="6" data-password="season">
     <h1>Riddle V</h1>
     <p>[Portrait Gaze Puzzle Placeholder]</p>
     <button onclick="nextPage()">Next</button>
