@@ -1,16 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Cormorant+Garamond&display=swap');
 
 body {
-  margin: 0;
   background: #FFE5EA;
   font-family: 'Cormorant Garamond', serif;
   color: #D18293;
 }
 
 #app {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 60px 30px;
   text-align: center;
 }
 
@@ -19,8 +15,11 @@ body {
 }
 
 .page.active {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
 
 .password-form {
   display: flex;
@@ -44,7 +43,7 @@ body {
 
 
 h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 2.5rem;
   margin-bottom: 20px;
 }
@@ -61,12 +60,12 @@ button, .download {
   background: transparent;
   cursor: pointer;
   text-decoration: none;
-  color: ##D72865;
+  color: #D72865;
 }
 
 button:hover, .download:hover {
-  background: ##DF4E81;
-  color: ##F4C3D4;
+  background: #DF4E81;
+  color: #F4C3D4;
 }
 
 .page input {
@@ -80,4 +79,18 @@ button:hover, .download:hover {
 .page .error {
   color: #8C5656;
   min-height: 1em;
+}
+
+.page[data-page="4"] p {
+  transform: scaleX(-1);
+  rotate: 180;
+}
+
+.jigsaw {
+  border: none;
+  width: 336px;
+  height: 278px;
+  display: block;
+  margin: 0 auto;
+
 }
