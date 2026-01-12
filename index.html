@@ -28,15 +28,15 @@
       <button onclick="checkPassword()">Whisper</button>
   </section>
   
-  <section class="page active" data-page="1" data-password="debut">
+  <section class="page active" data-page="1">
     <h1>Well done. Now keep your wits about you, and sharpen your mind.</h1>
     <p>Only those of precise manner and discretion may proceed.</p>
     <button onclick="nextPage()">I accept.</button>
   </section>
 
-  <section class="page" data-page="2" data-password="scandal">
-    <h1>Riddle I</h1>
-    <p>[Caesar Box Puzzle Placeholder]</p>
+  <section class="page" data-page="2" data-password="debut" data-hint="Climb two stairs, and spell it out.">
+    <h1>The Shifted Message</h1>
+    <p>fgdwv</p>
     
        <input
     type="text"
@@ -46,12 +46,17 @@
 
   <p class="error"></p>
     
-    <button onclick="nextPage()">Next</button>
+    <button onclick="checkPagePassword(this)">Next</button>
+    
+    <button onclick="showHint(this)">Hint</button>
+  <div class="hint"></div>
+</div>
+
   </section>
 
-  <section class="page" data-page="3" data-password="whistledown">
-    <h1>Riddle II</h1>
-    <p>[Jigsaw Puzzle Placeholder]</p>
+  <section class="page" data-page="3" data-password="scandal" data-hint="Rearrange to accuracy. The answer is an event most giddying.">
+    <h1>Order, If One Is Daring Enough to Impose It</h1>
+   <iframe class="jigsaw"title="puzzle" src="https://www.jigsawplanet.com/?rc=play&amp;pid=1475f4972e8e&amp;view=iframe" frameborder="1" allowfullscreen></iframe>
 
      <input
     type="text"
@@ -59,12 +64,15 @@
     onkeydown="if(event.key==='Enter') checkPagePassword(this)"
   >
     
-    <button onclick="nextPage()">Next</button>
+    <button onclick="checkPagePassword(this)">Next</button>
+     <button onclick="showHint(this)">Hint</button>
+  <div class="hint"></div>
+</div>
   </section>
 
-  <section class="page" data-page="4" data-password="etiquette">
-    <h1>Riddle III</h1>
-    <p>[Mirrored Text Placeholder]</p>
+  <section class="page" data-page="4" data-password="whistledown" data-hint="A simple matter of perspective. A mirror may help.">
+    <h1>Society’s Secrets, Seen in Glass</h1>
+    <p>WHISTLEDOWN</p>
 
      <input
     type="text"
@@ -72,33 +80,42 @@
     onkeydown="if(event.key==='Enter') checkPagePassword(this)"
   >
     
-    <button onclick="nextPage()">Next</button>
+    <button onclick="checkPagePassword(this)">Next</button>
+     <button onclick="showHint(this)">Hint</button>
+  <div class="hint"></div>
+</div>
   </section>
 
-  <section class="page" data-page="5" data-password="rake">
-    <h1>Riddle IV</h1>
-    <p>[Sheet Music Cipher Placeholder]</p>
+  <section class="page" data-page="5" data-password="etiquette" data-hint="Familiarize yourself with the scale. Then, apply the noted conditions and equivalencies.">
+     <img src="musicsheet.jpg" alt="notation" width="700" height="400" > 
      <input
     type="text"
     placeholder="Enter password"
     onkeydown="if(event.key==='Enter') checkPagePassword(this)"
   >
-    <button onclick="nextPage()">Next</button>
+    <button onclick="checkPagePassword(this)">Next</button>
+     <button onclick="showHint(this)">Hint</button>
+  <div class="hint"></div>
+</div>
   </section>
 
-  <section class="page" data-page="6" data-password="season">
-    <h1>Riddle V</h1>
-    <p>[Portrait Gaze Puzzle Placeholder]</p>
+  <section class="page" data-page="6" data-password="rake" data-hint="It's a simple question, darling.">
+    <h1>The Duke.. </h1>
+      <h3>  How shall I describe him? He possesses a reputation for charm and indulgence that precedes him into every drawing room, marked by a habitual disregard for propriety, a fondness for fleeting attachments, and a talent for leaving both hearts and reputations in a state of quiet disrepair. At that, he is excellent at collecting the leaves on the porch.</h3>
+    <p>What would you call him?</p>
      <input
     type="text"
     placeholder="Enter password"
     onkeydown="if(event.key==='Enter') checkPagePassword(this)"
   >
-    <button onclick="nextPage()">Next</button>
+    <button onclick="checkPagePassword(this)">Next</button>
+     <button onclick="showHint(this)">Hint</button>
+  <div class="hint"></div>
+</div>
   </section>
 
  <section class="page" data-page="7">
-  <h1>You are cordially invited to Lady Teakettle's soirée.</h1>
+  <h1>You've passed. Huzzah. You are cordially invited to Lady Teakettle's soirée.</h1>
   <p>The invitation is now unsealed. May the kettle whistle down.</p>
 
   <a class="download" href="invitation.pdf" download>
