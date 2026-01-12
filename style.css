@@ -94,3 +94,12 @@ button:hover, .download:hover {
   margin: 0 auto;
 
 }
+
+.hint {
+  margin-top: 20px;
+  padding: 16px 20px;
+  border: 1px solid #D18293;
+  background: #FFF1F4;
+  font-style: italic;
+  max-width: 400px;
+}
